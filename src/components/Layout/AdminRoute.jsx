@@ -14,8 +14,12 @@ const AdminRoute = () => {
     }
 
     // Jika ada user tapi bukan admin, tendang ke halaman lain
-    if (user) {
-        return <Navigate to="/" replace />; // Arahkan ke landing page
+    if (user.role == 'teacher') {
+        return <Navigate to="/teacher-dashboard" replace />; // Arahkan ke landing page
+    }
+    
+    if(user.role == 'student') {
+        return <Navigate to="/student-dashboard" replace />; // Arahkan ke landing page
     }
     
     // Jika tidak ada user sama sekali, tendang ke login

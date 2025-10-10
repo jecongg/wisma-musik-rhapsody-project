@@ -15,12 +15,12 @@ const menus = [
 ]
 
 export default function AdminPage() {
-    const { logout } = useFirebaseAuth();
-    const { currentUser } = useContext(FirebaseDataContext);
+    const { user, logout } = useFirebaseAuth();
+    // const { currentUser } = useContext(FirebaseDataContext);
     const [activeComponent, setActiveComponent] = useState('dashboard');
 
     
-    if (!currentUser) {
+    if (!user) {
         return (
             <div className='p-4 flex justify-center items-center'>
                 <div className='text-center'>
@@ -36,13 +36,13 @@ export default function AdminPage() {
     const renderActiveComponent = () => {
         switch(activeComponent) {
             case 'dashboard':
-                return <Dashboard user={currentUser} />;
+                return <Dashboard user={user} />;
             case 'teachers':
                 return <TeacherManagement />;
             case 'students':
                 return <StudentManagement />;
             default:
-                return <Dashboard user={currentUser} />;
+                return <Dashboard user={user} />;
         }
     };
 
@@ -50,7 +50,7 @@ export default function AdminPage() {
         <>
         <div className='flex'>
           <Sidebar 
-            user={currentUser} 
+            user={user} 
             menus={menus} 
             activeComponent={activeComponent}
             setActiveComponent={setActiveComponent}

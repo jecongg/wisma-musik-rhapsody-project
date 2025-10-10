@@ -5,6 +5,8 @@ import PublicLayout from './components/Layout/PublicLayout';
 import AdminPage from './pages/Admin/AdminPage';
 import RegisterTeacher from './pages/RegisterTeacher';
 import AdminRoute from "./components/Layout/AdminRoute"; // <-- IMPORT BARU
+import LandingPage from "./pages/LandingPage";
+import LoginPage from "./pages/Login/LoginPage";
 
 function App() {
   const router = createBrowserRouter(
