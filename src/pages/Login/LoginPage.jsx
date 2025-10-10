@@ -79,13 +79,13 @@ export default function LoginPage() {
                     <form>
                         <div className='flex flex-col space-y-1 mb-2'>
                             <label className='text-md'>Email</label>
-                            <input type="text" className='mt-1 p-2 border rounded-md text-sm' disabled/>
+                            <input type="text" className='mt-1 p-2 border rounded-md text-sm'/>
                         </div>
                         <div className='flex flex-col space-y-1 mb-2'>
                             <label>Password</label>
-                            <input type="text" className='mt-1 p-2 border rounded-md text-sm' disabled/>
+                            <input type="text" className='mt-1 p-2 border rounded-md text-sm'/>
                         </div>
-                        <button disabled className='w-full bg-gray-400 text-white p-2 rounded-md mt-4 cursor-not-allowed'>Login</button>
+                        <button className='w-full bg-gray-400 text-white p-2 rounded-md mt-4'>Login</button>
                     </form>
 
                     {/* Pembatas "Atau" */}
