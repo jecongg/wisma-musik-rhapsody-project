@@ -7,6 +7,8 @@ import RegisterTeacher from './pages/RegisterTeacher';
 import AdminRoute from "./components/Layout/AdminRoute"; // <-- IMPORT BARU
 import LandingPage from "./pages/LandingPage";
 import LoginPage from "./pages/Login/LoginPage";
+import TeacherDashboard from "./pages/Teacher/TeacherDashboard";
+import TeacherRoute from "./components/Teacher/TeacherRoute";
 
 function App() {
   const router = createBrowserRouter(
@@ -26,6 +28,9 @@ function App() {
         </Route>
         
         {/* Nanti Anda bisa menambahkan TeacherRoute dan StudentRoute di sini */}
+        <Route element={<TeacherRoute />}>
+          <Route path='/teacher-dashboard' element={<TeacherDashboard />} />
+        </Route>
       </>
     )
   )
